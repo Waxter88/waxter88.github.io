@@ -50,6 +50,12 @@ section {
     margin: 0 10px;
 }
 
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
 footer {
     text-align: center;
     padding: 10px 0;
