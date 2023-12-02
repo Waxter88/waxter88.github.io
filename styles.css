@@ -57,7 +57,9 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav a:hover {
+/* Hover and focus states for links */
+nav ul li a:hover,
+nav ul li a:focus {
     color: #63D471;
 }
 
@@ -115,13 +117,31 @@ footer {
     padding: 10px 0;
     background: #333;
     color: #fff;
-    font-size: 0.25rem;
+    font-size: 0.5rem;
 }
 
 @media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: none; /* Hide initially */
+    }
+
     nav ul li {
         display: block;
-        text-align: center;
+        text-align: right;
+    }
+
+    /* Hamburger icon */
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Show menu when .nav-toggle is clicked */
+    .nav-toggle.active + ul {
+        display: block;
     }
 
     .project {
@@ -132,4 +152,7 @@ footer {
     }
     
 }
+
+
+
 
