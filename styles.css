@@ -60,6 +60,7 @@ nav ul {
 
 nav ul li {
     margin-right: 1.5rem;
+    align-items: center;
 }
 
 nav ul li a {
