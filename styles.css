@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px; /* Updated for better readability */
+    font-size: 1rem; /* Updated for better readability */
     font-weight: 400; /* Normal font weight */
     line-height: 1.6;
     margin: 0;
