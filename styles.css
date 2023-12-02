@@ -68,25 +68,42 @@ section {
 
 /* Display project headers  */
 
+#projects {
+    background-color: #355A3A;
+    text-align: center; /* Center aligns content within projects section */
+    padding: 1rem 0;
+    margin: 0 auto; /* Centers the section */
+    max-width: 80%; /* Limits the maximum width and helps in centering */
+}
+
 .project {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem; /* Adds space between grid items */
-    justify-content: center; /* Centers grid items horizontally */
-    align-items: center; /* Centers grid items vertically */
-    justify-items: center; /* Centers content within each grid item */
-    /* ... other existing styles ... */
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
     border-radius: 0.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-width: 0.1rem;
     border-color: #233329;
     background: #CDCDCD;
+    margin-bottom: 1rem; /* Adds space between project cards */
 }
 
-#projects {
-    background-color: #355A3A;
-    text-align: center; /* Center aligns content within projects section */
-    padding: 1rem 0;
+.project h4 {
+    font-size: 1.2rem; /* Adjust the font size */
+    font-weight: bold; /* Make the title bold */
+    margin-bottom: 0.5rem; /* Space below the title */
+    color: #233329; /* Title color */
+}
+
+/* Adjusting headers inside the #projects section */
+#projects h2, #projects h3, #projects h4 {
+    /* Override styles specific to headers in projects section */
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff; /* Adjust as needed */
+    /* Add other styles as necessary */
 }
 
 footer {
@@ -105,6 +122,9 @@ footer {
 
     .project {
         grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+    #projects {
+        max-width: 100%; /* Allows full width on smaller screens */
     }
 }
 
