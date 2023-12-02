@@ -89,7 +89,7 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-width: 0.1rem;
     border-color: #233329;
-    background: #CDCDCD;
+    background: #cdcdcd8c;
     margin-bottom: 1rem; /* Adds space between project cards */
     padding: 1rem; /* Add padding to project cards */
 }
