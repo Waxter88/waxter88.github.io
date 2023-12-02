@@ -3,6 +3,7 @@
 body {
     font-family: 'Montserrat', Impact, sans-serif;
     font-size: 0.5rem; /* default font size */
+    font-weight: 600;
     line-height: 1.6; /* default line height */
     margin: 0;
     padding: 0;
