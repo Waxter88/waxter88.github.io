@@ -104,13 +104,6 @@ section {
     text-align: center; /* Center-align project titles */
 }
 
-/* Adjusting headers inside the #projects section */
-#projects h2, #projects h3, #projects h4 {
-    /* Override styles specific to headers in projects section */
-    font-family: 'Bebas Neue', sans-serif;
-    color: #fff; /* Adjust as needed */
-    /* Add other styles as necessary */
-}
 
 footer {
     text-align: center;
