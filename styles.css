@@ -76,6 +76,7 @@ section {
     padding: 1rem 0;
     margin: 0 auto; /* Centers the section */
     max-width: 100%; /* Allows full width */
+    border-radius: 0.5rem;
 }
 
 .project {
