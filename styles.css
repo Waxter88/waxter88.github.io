@@ -108,6 +108,11 @@ section {
     padding: 1rem;
 }
 
+.project a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Optional: ensures link color matches the parent element */
+}
+
 .project h4 {
     font-weight: bold;
     margin-bottom: 0.5rem;
