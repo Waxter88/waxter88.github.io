@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 
 body {
-    font-family: 'Montserrat', Impact, sans-serif;
-    font-size: 0.5rem; /* default font size */
-    font-weight: 600;
-    line-height: 1.6; /* default line height */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Updated for better readability */
+    font-weight: 400; /* Normal font weight */
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,15 +17,15 @@ header, nav, footer {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 1rem;
-    letter-spacing: .1rem;
-    color:#355A3A;
+    letter-spacing: 0.1rem;
+    color: #355A3A;
 }
 
-h2, h3, h4, h5, h6{
+h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter{
+h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter {
     text-transform: uppercase;
     font-weight: bold;
     color: #80110F;
@@ -34,22 +34,24 @@ h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::firs
 header {
     background: #233329;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    letter-spacing: .8rem;
+    letter-spacing: 0.8rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 1.5rem;
 }
 
@@ -58,25 +60,25 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Hover and focus states for links */
 nav ul li a:hover,
 nav ul li a:focus {
     color: #63D471;
+    text-decoration: underline;
 }
 
 section {
     padding: 1.5rem;
-    margin: 0 auto; /* Adjust margin for centering */
-    display: block; /* Ensure section is block-level */
-    max-width: 100%; /* Allows section to span full width */
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
 }
 
 #projects {
     background-color: #355A3A;
-    text-align: center; /* Center aligns content within projects section */
-    padding: 1rem 0;
-    margin: 0 auto; /* Centers the section */
-    max-width: 100%; /* Allows full width */
+    text-align: center;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 100%;
     border-radius: 0.5rem;
 }
 
@@ -89,26 +91,25 @@ section {
     justify-items: center;
     border-radius: 0.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-width: 0.1rem;
     border-color: #233329;
     background: #cdcdcd8c;
-    margin-bottom: 1rem; /* Adds space between project cards */
-    padding: 1rem; /* Add padding to project cards */
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 .project h4 {
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #233329;
-    text-align: center; /* Center-align project titles */
+    text-align: center;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     background: #333;
     color: #fff;
-    font-size: 0.5rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -116,7 +117,7 @@ footer {
         position: absolute;
         right: 10px;
         top: 10px;
-        display: none; /* Hide initially */
+        display: none;
     }
 
     nav ul li {
@@ -124,26 +125,19 @@ footer {
         text-align: right;
     }
 
-    /* Hamburger icon */
     .nav-toggle {
         display: block;
         cursor: pointer;
     }
 
-    /* Show menu when .nav-toggle is clicked */
     .nav-toggle.active + ul {
         display: block;
     }
 
     .project {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
+        grid-template-columns: 1fr;
     }
     #projects {
-        max-width: 100%; /* Allows full width on smaller screens */
+        max-width: 100%;
     }
-    
 }
-
-
-
-
