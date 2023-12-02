@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3rem;
-    color: #80110F;
+    color: #C91B18;
 }
 
 h2, h3, h4, h5, h6 {
@@ -69,7 +69,10 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-    color: #63D471;
+    color: #C91B18;
+}
+
+nav ul li a:hover{
     text-decoration: underline;
 }
 
