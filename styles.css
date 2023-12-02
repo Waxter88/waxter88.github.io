@@ -73,7 +73,8 @@ section {
 }
 
 #projects{
-    background-color:#63A46C
+    background-color:#63A46C;
+    width:100%;
 }
 
 footer {
