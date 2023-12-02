@@ -50,16 +50,23 @@ section {
     margin: 0 10px;
 }
 
+/* Display project headers  */
+
 .project {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
-    background: #a8a8a8;
+    background: #c7c7c7;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-width: 2px;
     border-color: black;
+    margin-bottom: 1rem;
+}
+
+#projects{
+    background-color:#808080
 }
 
 nav a:hover {
