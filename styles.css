@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', Impact, sans-serif;
-    font-size: 3rem; /* default font size */
+    font-size: 1rem; /* default font size */
     line-height: 1.6; /* default line height */
     margin: 0;
     padding: 0;
@@ -27,6 +27,7 @@ h2, h3, h4, h5, h6{
 h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter{
     text-transform: uppercase;
     font-weight: bold;
+    color: #80110F;
 }
 
 header {
@@ -92,7 +93,7 @@ footer {
     padding: 10px 0;
     background: #333;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
 
 @media (max-width: 600px) {
