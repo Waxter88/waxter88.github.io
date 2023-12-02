@@ -69,9 +69,8 @@ section {
 /* Display project headers  */
 
 .project {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 3rem;
     background: #CDCDCD;
     padding: 1.5rem;
     border-radius: 0.2rem;
@@ -79,8 +78,7 @@ section {
     border-width: 0.1rem;
     border-color: #233329;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    margin-right: 1rem;
+    align-self: center;
 }
 
 #projects{
