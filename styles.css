@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3, h4, h5, h6{
-    text-align: left;
+    text-align: center;
 }
 
 h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter{
@@ -75,7 +75,7 @@ section {
     text-align: center; /* Center aligns content within projects section */
     padding: 1rem 0;
     margin: 0 auto; /* Centers the section */
-    max-width: 80%; /* Limits the maximum width and helps in centering */
+    max-width: 100%; /* Limits the maximum width and helps in centering */
 }
 
 .project {
