@@ -56,14 +56,15 @@ section {
 .project {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
+    grid-gap: 2rem;
     background: #c7c7c7;
-    padding: 20px;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-width: 2px;
     border-color: black;
     margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 #projects{
