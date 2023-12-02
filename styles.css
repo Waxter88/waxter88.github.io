@@ -65,19 +65,17 @@ nav ul li a:focus {
 
 section {
     padding: 1.5rem;
-    margin: 1rem auto; /* Adjust margin for centering */
+    margin: 0 auto; /* Adjust margin for centering */
     display: block; /* Ensure section is block-level */
-    max-width: 80%; /* Limit the max width */
+    max-width: 100%; /* Allows section to span full width */
 }
-
-/* Display project headers  */
 
 #projects {
     background-color: #355A3A;
     text-align: center; /* Center aligns content within projects section */
     padding: 1rem 0;
     margin: 0 auto; /* Centers the section */
-    max-width: 100%; /* Limits the maximum width and helps in centering */
+    max-width: 100%; /* Allows full width */
 }
 
 .project {
