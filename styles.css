@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', Impact, sans-serif;
-    font-size: 16px; /* default font size */
+    font-size: 3rem; /* default font size */
     line-height: 1.6; /* default line height */
     margin: 0;
     padding: 0;
@@ -70,7 +70,7 @@ section {
 .project {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
+    grid-gap: 3rem;
     background: #CDCDCD;
     padding: 1.5rem;
     border-radius: 0.2rem;
@@ -91,6 +91,7 @@ footer {
     padding: 10px 0;
     background: #333;
     color: #fff;
+    font-size: 1rem;
 }
 
 @media (max-width: 600px) {
