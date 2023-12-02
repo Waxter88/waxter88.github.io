@@ -20,6 +20,10 @@ h1, h2, h3, h4, h5, h6 {
     color:#63D471;
 }
 
+h2, h3, h4, h5, h6{
+    text-align: left;
+}
+
 header {
     background: #233329;
     color: #fff;
@@ -74,7 +78,7 @@ section {
 
 #projects{
     background-color:#63A46C;
-    width:100%;
+    width: 100%;
 }
 
 footer {
