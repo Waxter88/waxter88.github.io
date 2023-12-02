@@ -17,10 +17,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 1rem;
     letter-spacing: .4rem;
+    color:#63D471;
 }
 
 header {
-    background: #333;
+    background: #233329;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -46,6 +47,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #63D471;
+}
+
 section {
     padding: 20px;
     margin: 0 10px;
@@ -57,22 +62,18 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2rem;
-    background: #c7c7c7;
+    background: #6A7152;
     padding: 1.5rem;
-    border-radius: 10px;
+    border-radius: 0.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-width: 2px;
-    border-color: black;
+    border-width: 0.1rem;
+    border-color: #233329;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
 }
 
 #projects{
-    background-color:#808080
-}
-
-nav a:hover {
-    color: #333;
+    background-color:#63A46C
 }
 
 footer {
