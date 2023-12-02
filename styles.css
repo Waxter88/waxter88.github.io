@@ -100,9 +100,5 @@ footer {
         display: block;
         text-align: center;
     }
-
-    .project {
-        grid-template-columns: 1fr;
-    }
 }
 
