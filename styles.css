@@ -63,7 +63,9 @@ nav a:hover {
 
 section {
     padding: 1.5rem;
-    margin: 0 1rem;
+    margin: 1rem auto; /* Adjust margin for centering */
+    display: block; /* Ensure section is block-level */
+    max-width: 80%; /* Limit the max width */
 }
 
 /* Display project headers  */
@@ -89,13 +91,15 @@ section {
     border-color: #233329;
     background: #CDCDCD;
     margin-bottom: 1rem; /* Adds space between project cards */
+    padding: 1rem; /* Add padding to project cards */
 }
 
 .project h4 {
-    font-size: 1.2rem; /* Adjust the font size */
-    font-weight: bold; /* Make the title bold */
-    margin-bottom: 0.5rem; /* Space below the title */
-    color: #233329; /* Title color */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #233329;
+    text-align: center; /* Center-align project titles */
 }
 
 /* Adjusting headers inside the #projects section */
@@ -126,5 +130,6 @@ footer {
     #projects {
         max-width: 100%; /* Allows full width on smaller screens */
     }
+    
 }
 
