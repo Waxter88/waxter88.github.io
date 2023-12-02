@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Roboto', Impact, sans-serif;
-    font-size: 1rem; /* default font size */
+    font-size: 0.5rem; /* default font size */
     line-height: 1.6; /* default line height */
     margin: 0;
     padding: 0;
@@ -93,7 +93,7 @@ footer {
     padding: 10px 0;
     background: #333;
     color: #fff;
-    font-size: 0.75rem;
+    font-size: 0.25rem;
 }
 
 @media (max-width: 600px) {
