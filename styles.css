@@ -17,11 +17,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 1rem;
     letter-spacing: .4rem;
-    color:#63D471;
+    color:#355A3A;
 }
 
 h2, h3, h4, h5, h6{
     text-align: left;
+}
+
+h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter{
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 header {
@@ -66,7 +71,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2rem;
-    background: #6A7152;
+    background: #CDCDCD;
     padding: 1.5rem;
     border-radius: 0.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -77,7 +82,7 @@ section {
 }
 
 #projects{
-    background-color:#63A46C;
+    background-color:#355A3A;
     width: 100%;
 }
 
