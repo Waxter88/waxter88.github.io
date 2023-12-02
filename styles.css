@@ -16,7 +16,7 @@ header, nav, footer {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
     margin-bottom: 1rem;
-    letter-spacing: .4rem;
+    letter-spacing: .1rem;
     color:#355A3A;
 }
 
@@ -69,21 +69,24 @@ section {
 /* Display project headers  */
 
 .project {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background: #CDCDCD;
-    padding: 1.5rem;
+    gap: 1rem; /* Adds space between grid items */
+    justify-content: center; /* Centers grid items horizontally */
+    align-items: center; /* Centers grid items vertically */
+    justify-items: center; /* Centers content within each grid item */
+    /* ... other existing styles ... */
     border-radius: 0.2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-width: 0.1rem;
     border-color: #233329;
-    margin-bottom: 1rem;
-    align-self: center;
+    background: #CDCDCD;
 }
 
-#projects{
-    background-color:#355A3A;
-    width: 100%;
+#projects {
+    background-color: #355A3A;
+    text-align: center; /* Center aligns content within projects section */
+    padding: 1rem 0;
 }
 
 footer {
@@ -98,6 +101,10 @@ footer {
     nav ul li {
         display: block;
         text-align: center;
+    }
+
+    .project {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
     }
 }
 
