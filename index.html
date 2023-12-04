@@ -3,85 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Portfolio of Jackson">
-    <title>Your Portfolio</title>
+    <meta name="description" content="Professional Portfolio of Jackson Pipe, showcasing software development projects and experience.">
+    <meta name="keywords" content="Jackson Pipe, Software Developer, Portfolio, Projects">
+    <title>Jackson Pipe - Software Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="path/to/favicon.ico">
+    <script src="/waxter88.github.io/script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Jackson Pipe</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume"></a>Resume</li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Jackson Pipe</h1>
+        </div>
     </header>
+    <nav>
+        <button id="nav-toggle" aria-label="Toggle Navigation">&#9776;</button> <!-- Hamburger Icon -->
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-        </section>
-
-       
-
-        <section id="projects-section">
-            <h2>Projects</h2>
-                <!-- Project items will be added here -->
-    
-            <h3>Games</h3>
-            <!-- Game Projects. Only falling blocks so far /games/ -->
-
-            <div id="projects">
-
-                <div class="project">
-                    <a href="games/falling_blocks/index.html">
-                        <h4>Falling Blocks</h4>
-                    </a>
-                    <p>Small JavaScript Game Made in 45 Minutes.</p>
-                </div>
-
-                <div class="project">
-                    <a href="Placeholder">
-                        <h4>Placeholder</h4>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
+            <p>[Your actual bio here]
                 
+            </p>
+        </section>
+        <h2>Projects</h2>
+        <section id="projects-section">
+            
 
-                <div class="project">
-                    <a href="Placeholder">
-                        <h4>Placeholder</h4>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                </div>
-            </div>
+            <a href="games/falling_blocks/index.html">
+                <article class="project">
+                    
+                        <h3>Falling Blocks</h3>
+                    
+                    <p>Small JavaScript Game Made in 45 Minutes.</p>
+                    
+                </article>
+            </a>
+
+            <a href="games/falling_blocks/index.html">
+                <article class="project">
+                    
+                        <h3>Falling Blocks</h3>
+                    
+                    <p>Small JavaScript Game Made in 45 Minutes.</p>
+                    
+                </article>
+            </a>
+
+            <a href="games/falling_blocks/index.html">
+                <article class="project">
+                    
+                        <h3>Falling Blocks</h3>
+                    
+                    <p>Small JavaScript Game Made in 45 Minutes.</p>
+                    
+                </article>
+            </a>
+
+            <!-- Add more projects here -->
 
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <!-- Contact information or form will go here -->
-
-            <!-- Symbols for linkedin, github, email-->
-
             <div id="contact-info">
-                <a href="https://www.linkedin.com/in/jackson-pipe-1b1b3b1b3/">
-                    <img src="images/linkedin.png" alt="linkedin">
+                <a href="https://www.linkedin.com/in/jackson-pipe/">
+                    <i data-feather="linkedin"></i>
                 </a>
-                <a href="https://www.github.com/jacksonpipe">
-                    <img src="images/github.png" alt="github">
+                <a href="https://www.github.com/waxter88">
+                    <i data-feather="github"></i>
                 </a>
                 <a href="mailto:jackbpipe@gmail.com">
-                    <img src="images/email.png" alt="email">
-                </a>
+                    <i data-feather="mail"></i>
+                </a>                          
             </div>
-            
         </section>
     </main>
     <footer>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
         <p>© 2023 Jackson Pipe</p>
     </footer>
 </body>
