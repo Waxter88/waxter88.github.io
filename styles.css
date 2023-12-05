@@ -121,36 +121,26 @@ section {
 
 #projects-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
 }
 
-
-#projects-section article {
-    background-color: #1a1a1aa1; /* Dark background for project cards */
-    text-align: center;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid #444; /* Subtle border */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Deeper shadow for depth */
-    
-}
 
 #projects-section article a{
     text-decoration: none;
 }
 
 .project {
-    background-color: #1f1f1f;
-    padding: 20px;
+    background-color: #1a1a1aa1;
+    padding: 2rem;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     border: 2px solid #444;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; /* Aligns text to the start */
@@ -171,7 +161,7 @@ section {
     margin-left: 10px;
     color: #fff;
 }
-#projects-section article:hover {
+#projects-section a:hover {
     background-color: #000000; /* Slightly lighter on hover for contrast */
     cursor: pointer; /* Changes the cursor to indicate the item is clickable */
 }
@@ -324,6 +314,17 @@ footer p {
     transition: color 0.3s ease-in-out;
 }
 
+#github-projects-title{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    #projects-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
 
 @media (max-width: 768px) {
     h1 {
@@ -334,6 +335,9 @@ footer p {
     }
     .project {
         flex-basis: 100%; /* On smaller screens, projects take full width */
+    }
+    #projects-section {
+        grid-template-columns: 1fr; /* On smaller screens, projects are stacked */
     }
 }
 
