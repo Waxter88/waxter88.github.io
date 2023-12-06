@@ -323,9 +323,9 @@ footer p {
 
 button #theme-toggle, #theme-toggle {
     background: none;
-    background-color: #1a1a1a;
+    background-color: #fff;
     border: none;
-    color: #fff;
+    color: #1a1a1a;
     cursor: pointer;
 }
 
