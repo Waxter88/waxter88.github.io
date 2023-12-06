@@ -27,4 +27,4 @@ CSS: For styling and layout design.
 HTML: The backbone of the web portfolio.
 
 ## Contact
-Feel free to reach out if you have any questions or if you'd like to collaborate on a project. You can contact me directly through my GitHub profile.
+Feel free to reach out if you have any questions or if you'd like to collaborate on a project. You can contact me directly through my GitHub profile or [my email](jackbpipe@gmail.com).
