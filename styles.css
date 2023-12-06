@@ -321,7 +321,7 @@ footer p {
     text-align: center;
 }
 
-button #theme-toggle {
+button #theme-toggle, #theme-toggle {
     background: none;
     background-color: #1a1a1a;
     border: none;
