@@ -326,6 +326,7 @@ button#theme-toggle  {
     border: none;
     color: #fff;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 @media (max-width: 1200px) {
