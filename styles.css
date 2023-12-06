@@ -345,9 +345,10 @@ button#theme-toggle  {
     padding: 5px 5p;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
+    left: 100%;
+    margin-left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 0.8rem;
