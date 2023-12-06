@@ -45,7 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         });
     }
-      
-      
+
+    document.querySelectorAll('.tooltip').forEach(function (tooltip) {
+        tooltip.addEventListener('mouseenter', function () {
+            var tooltipText = this.querySelector('.tooltiptext');
+            var rect = tooltipText.getBoundingClientRect();
+            
+            // Reset classes
+            tooltipText.className = 'tooltiptext';
+    
+            // Determine the best position for the tooltip
+            if (rect.top < 0) {
+                tooltipText.classList.add('bottom');
+            } else if (window.innerWidth - rect.right < 0) {
+                tooltipText.classList.add('left');
+            } else if (rect.left < 0) {
+                tooltipText.classList.add('right');
+            } else {
+                tooltipText.classList.add('top');
+            }
+        });
+    });
+    
       
 });
