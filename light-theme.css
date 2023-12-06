@@ -369,7 +369,7 @@ footer p {
     }
 }
 
-#theme-toggle, button #theme-toggle{
+#theme-toggle {
     background: none;
     background-color: #f2f2f2;
     border: none;
