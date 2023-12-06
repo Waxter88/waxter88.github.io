@@ -323,7 +323,7 @@ footer p {
 
 button#theme-toggle  {
     background: none;
-    background-color: #333333;
+    background-color: none;
     border: none;
     color: #fff;
     cursor: pointer;
