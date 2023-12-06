@@ -59,11 +59,9 @@ h2 a:hover {
     background-color: transparent;
 }
 
-a {
-    text-decoration: none;
-    background-color: transparent; /* Ensure no background for all links */
+h2:hover {
+    background-color: transparent;
 }
-
 
 header h1 {
     margin: 0;

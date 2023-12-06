@@ -60,6 +60,11 @@ h2 a:hover {
     background-color: transparent;
 }
 
+h2:hover {
+    background-color: transparent;
+}
+
+
 .header-container {
     text-align: center;
     padding: 40px 0;
