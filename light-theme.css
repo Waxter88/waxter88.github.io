@@ -404,29 +404,6 @@ footer p {
     font-size: 0.8rem;
 }
 
-/* Position-specific styles */
-.tooltip .top {
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.tooltip .right {
-    top: -5px;
-    left: 105%;
-}
-
-.tooltip .bottom {
-    top: 125%;
-    left: 50%;
-    margin-left: -60px;
-}
-
-.tooltip .left {
-    top: -5px;
-    right: 105%;
-}
-
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -435,11 +412,12 @@ footer p {
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
+    top: 50%;
+    right: 100%; /* Position it to the left of the tooltip box */
+    margin-top: -5px; /* Adjust this value to align the arrow vertically */
     border-width: 5px;
     border-style: solid;
-    border-color: #f2f2f2 transparent transparent transparent;
+    border-color: transparent transparent transparent #f2f2f2; /* Default arrow color, can be overridden */
+    transform: translateY(-50%);
 }
 
