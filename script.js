@@ -28,21 +28,24 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.log('Error fetching GitHub repositories:', error));
 
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-        // Determine the current theme
-        var currentTheme = document.documentElement.getAttribute('data-theme');
-      
-        // Switch between 'light' and 'dark'
-        if (currentTheme === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          // Update the href attribute to point to the light theme stylesheet
-          document.getElementById('theme-style').href = 'light-theme.css';
-        } else {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          // Update the href attribute to point to the dark theme stylesheet
-          document.getElementById('theme-style').href = 'styles.css';
-        }
-      });
-      
     
+    var toggleButton = document.getElementById('theme-toggle');
+    var themeStyleLink = document.getElementById('theme-style');
+    
+    if (toggleButton && themeStyleLink) {
+        toggleButton.addEventListener('click', function() {
+        var currentTheme = document.documentElement.getAttribute('data-theme');
+        
+        if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeStyleLink.href = 'light-theme.css';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeStyleLink.href = 'styles.css';
+        }
+        });
+    }
+      
+      
+      
 });
