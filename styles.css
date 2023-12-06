@@ -367,7 +367,7 @@ button#theme-toggle  {
     margin-top: -5px; /* Adjust this value to align the arrow vertically */
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent transparent #555; /* Default arrow color, can be overridden */
+    border-color: transparent #555 transparent transparent; /* Default arrow color, can be overridden */
     transform: translateY(-50%);
 }
 
