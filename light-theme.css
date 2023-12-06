@@ -417,7 +417,7 @@ footer p {
     margin-top: -5px; /* Adjust this value to align the arrow vertically */
     border-width: 5px;
     border-style: solid;
-    border-color: transparent #f2f2f2 transparent transparent; /* Default arrow color, can be overridden */
+    border-color: transparent #e1dfdf transparent transparent; /* Default arrow color, can be overridden */
     transform: translateY(-50%);
 }
 
