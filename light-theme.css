@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Light background */
+    color: #333; /* Dark text color */
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF; /* Blue link color */
+}
+
+a:visited {
+    color: #007BFF; /* Blue link color for visited */
+}
+
+header {
+    border-bottom: 1px solid #ddd; /* Light grey border */
+}
+
+header, nav, footer {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    color: #333; /* Dark text color */
+}
+
+h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #e6201c;
+    font-size: 1.5em;
+}
+
+.header-container {
+    text-align: center;
+    padding: 40px 0;
+    background: #e6e6e6; /* Light grey background */
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.75rem;
+    font-size: 5rem;
+    color: #e6201c;
+}
+
+header h2, header h2::first-letter {
+    text-decoration: none;
+    letter-spacing: 0.3rem;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    color: #da7676;
+}
+
+nav {
+    background-color: #f2f2f2; /* Light grey background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-visible {
+    max-height: 300px;
+    height: auto;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #333; /* Dark text color */
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #C91B18; /* Red color for hover and focus */
+    transition: color 0.3s ease-in-out;
+}
+
+section {
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#projects-section {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#projects-section article a{
+    text-decoration: none;
+}
+
+.project {
+    background-color: #fff; /* White background */
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #ddd; /* Light grey border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    color: #333; /* Dark text color */
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.project a, .project a:visited, .project a:hover, .project a:focus {
+    text-decoration: none;
+    color: #007BFF; /* Blue link color */
+}
+
+.project h3 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333; /* Dark text color */
+}
+
+.project h3, .project p {
+    text-align: left;
+    margin-left: 10px;
+    color: #333; /* Dark text color */
+}
+
+#projects-section a:hover {
+    background-color: #e6e6e6; /* Light grey background on hover */
+    cursor: pointer;
+}
+
+#projects-section article:hover a,
+#projects-section article:hover h3,
+#projects-section article:hover p {
+    color: #333; /* Dark text color on hover */
+}
+
+footer {
+    padding: 20px 0;
+    background: #f2f2f2; /* Light grey background */
+    color: #333; /* Dark text color */
+    border-top: 1px solid #ddd; /* Light grey border */
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+#contact-info a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #007BFF; /* Blue link color */
+    font-size: 24px;
+}
+
+#contact-info a:hover {
+    color: #e6201c; /* Red color on hover */
+}
+
+#contact {
+    text-align: center;
+    padding: 20px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #007BFF; /* Blue link color */
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    max-width: fit-content;
+}
+
+.contact-icon span {
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.contact-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-button {
+    text-decoration: none;
+    background-color: #e6201c; /* Red background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    border-color: #e6201c;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.contact-button:hover {
+    background-color: #c91b18; /* Darker red on hover */
+}
+
+#contact-info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-me {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#about-me h2 {
+    color: #e6201c; /* Red color for titles */
+    margin-bottom: 20px;
+}
+
+#about-me p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#about-me .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+#about-me .contact-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-link {
+    text-decoration: none;
+    background-color: #e6201c; /* Red background */
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contact-link:hover {
+    background-color: #c91b18; /* Darker red on hover */
+}
+
+#nav-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #333; /* Dark text color */
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+}
+
+#nav-toggle:hover {
+    color: #e6201c; /* Red color on hover */
+    transition: color 0.3s ease-in-out;
+}
+
+#github-projects-title {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    #projects-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    nav ul li {
+        margin-right: 1rem;
+    }
+    .project {
+        flex-basis: 100%;
+    }
+    #projects-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+    }
+    #nav-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+    nav {
+        position: sticky;
+        top: 0;
+        width: 100%; /* Full width */
+        background-color: #333; /* Background of the nav */
+        height: 0; /* Initially hidden */
+    }
+    nav ul {
+        
+        flex-direction: column; /* Stack menu items */
+        align-items: center; /* Center align items */
+        padding-top: 10px; /* Padding below the toggle button */
+        overflow: hidden; /* Hide the overflow */
+        max-height: 0; /* Initially collapsed */
+        transition: max-height 0.5s ease-out; /* Smooth transition for max-height */
+    }
+    nav ul li {
+        margin: 10px 0; /* Spacing between menu items */
+    }
+    .project {
+        padding: 1rem;
+    }
+}
