@@ -337,12 +337,12 @@ button#theme-toggle  {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: auto;
     background-color: #555;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px 5p;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -350,6 +350,7 @@ button#theme-toggle  {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
+    font-size: 0.8rem;
 }
 
 .tooltip:hover .tooltiptext {
