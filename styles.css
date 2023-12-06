@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
 
+/* DARK THEME --------------*/
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -319,12 +321,19 @@ footer p {
     text-align: center;
 }
 
+#theme-toggle{
+    background: none;
+    background-color: #1a1a1a;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
 @media (max-width: 1200px) {
     #projects-section {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
     }
 }
-
 
 @media (max-width: 768px) {
     h1 {
