@@ -388,8 +388,8 @@ footer p {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: auto;
-    background-color: #555;
-    color: #e1dfdf;
+    background-color: #e1dfdf;
+    color: #555;
     text-align: center;
     border-radius: 6px;
     padding: 5px 5p;
