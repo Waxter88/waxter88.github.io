@@ -237,6 +237,10 @@ h2 a:hover {
     padding: 1em 1em;
 }
 
+#contact-info svg{
+    margin: 0 10px;
+}
+
 #contact {
     background-color: var(--contact-bg-dark); /* Default to dark theme color */
     color: var(--text-color-dark);
