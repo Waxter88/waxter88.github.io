@@ -17,7 +17,6 @@ body {
 /* Make ALL <a> have no decoration */
 a {
     text-decoration: none;
-    background-color: transparent;
 }
 
 a:visited {
