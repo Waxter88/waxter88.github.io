@@ -155,7 +155,7 @@ section,
 .header-container,
 footer {
     background: var(--footer-bg-dark);
-    color: #fff;
+    color: var(--footer-color-dark);
 }
 
 /* Projects Section ----------------------------*/
