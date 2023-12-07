@@ -115,6 +115,15 @@ nav {
     padding: 1em, 1em;
 }
 
+.nav-visible {
+    max-height: 25em; /* Adjust as needed to fit content */
+    width: 100%;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 0.5s ease-out, visibility 0s, opacity 0.5s ease-out;
+}
+
 nav ul {
     list-style: none;
     display: flex;
