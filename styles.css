@@ -89,6 +89,10 @@ h1 {
     color: var(--header-accent-color-dark);
 }
 
+h2{
+    color: var(--text-color-dark);
+}
+
 h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter {
     text-transform: uppercase;
     font-weight: bold;
@@ -218,6 +222,11 @@ h2 a:hover {
     align-items: center;
 }
 
+#contact {
+    background-color: var(--contact-bg-dark); /* Default to dark theme color */
+    color: var(--text-color-dark);
+}
+
 #about-me {
     background-color: var(--about-me-bg-dark);
     color: var(--text-color-dark);
@@ -225,8 +234,12 @@ h2 a:hover {
 
 #nav-toggle {
     display: none;
-    color: var(--nav-toggle-color-dark);
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--nav-toggle-color-dark); /* Using variable for color */
     cursor: pointer;
+    padding: 10px;
     position: absolute;
     top: auto;
     right: 0.05em;
