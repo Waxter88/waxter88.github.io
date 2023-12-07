@@ -34,6 +34,7 @@
     --tooltip-text-color-light: #555;
     --contact-button-bg-light: #e6201c;
     --nav-toggle-color-light: #333;
+    --footer-color-dark: #333;
 }
 
 [data-theme="light"] {
@@ -111,6 +112,7 @@ nav {
     display: flex;
     justify-content: center;
     font-weight: 500;
+    padding: 1em, 1em;
 }
 
 nav ul {
@@ -220,6 +222,7 @@ h2 a:hover {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #contact {
