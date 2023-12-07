@@ -120,6 +120,7 @@ nav {
     max-height: 25em; /* Adjust as needed to fit content */
     width: 100%;
     height: auto;
+    min-height: 3em;
     visibility: visible;
     opacity: 1;
     transition: max-height 0.5s ease-out, visibility 0s, opacity 0.5s ease-out;
