@@ -55,6 +55,12 @@ h2 a{
     background-color: transparent;
 }
 
+.github-project-title a:hover {
+    color: #e6201c; /* Red color on hover */
+    transition: color 0.3s ease-in-out;
+    background-color: transparent;
+}
+
 h2 a:hover {
     color: #e6201c; /* Red color on hover */
     transition: color 0.3s ease-in-out;
