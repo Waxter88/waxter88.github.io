@@ -187,6 +187,7 @@ footer {
     background: var(--footer-bg-dark);
     color: var(--footer-color-dark);
     border-top: 1px solid #444;
+    text-align: center;
 }
 
 header {
