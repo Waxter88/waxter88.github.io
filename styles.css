@@ -258,6 +258,10 @@ h2 a:hover {
     align-items: center;
 }
 
+#contact p{
+    text-align: center;
+}
+
 #about-me {
     background-color: var(--about-me-bg-dark);
     color: var(--text-color-dark);
