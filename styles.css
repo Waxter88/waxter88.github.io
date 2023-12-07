@@ -112,6 +112,9 @@ nav ul {
 .nav-visible {
     max-height: 300px; /* Adjust as needed to fit content */
     height: auto;
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 0.5s ease-out, visibility 0s, opacity 0.5s ease-out;
 }
 
 
@@ -423,6 +426,11 @@ button#theme-toggle  {
         width: 100%; /* Full width */
         background-color: #333; /* Background of the nav */
         height: 0; /* Initially hidden */
+
+        overflow: hidden; /* Hide overflow */
+        transition: max-height 0.5s ease-out, visibility 0s 0.5s, opacity 0.5s ease-out;
+        visibility: hidden;
+        opacity: 0;
     }
     nav ul {
         
