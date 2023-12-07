@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => console.log('Error fetching GitHub repositories:', error));
 
     
+    /*
     var toggleButton = document.getElementById('theme-toggle');
     var themeStyleLink = document.getElementById('theme-style');
     
@@ -49,7 +50,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         });
     }
+    */
+    var toggleButton = document.getElementById('theme-toggle');
 
+    if (toggleButton) {
+        toggleButton.addEventListener('click', function() {
+            var currentTheme = document.documentElement.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleButton.innerHTML = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                toggleButton.innerHTML = '☀️';
+            }
+        });
+    }
+    
     
       
       
