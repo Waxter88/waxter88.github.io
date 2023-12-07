@@ -34,7 +34,7 @@
     --tooltip-text-color-light: #555;
     --contact-button-bg-light: #e6201c;
     --nav-toggle-color-light: #333;
-    --footer-color-dark: #333;
+    --footer-color-light: #fff;
 }
 
 [data-theme="light"] {
@@ -242,11 +242,6 @@ h2 a:hover {
     color: var(--text-color-dark);
     display: grid;
     align-items: center;
-}
-
-#contact-info{
-    margin-bottom: 2em;
-    padding: 1em, 1em;
 }
 
 #about-me {
