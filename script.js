@@ -57,12 +57,12 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleButton.addEventListener('click', function() {
             var currentTheme = document.documentElement.getAttribute('data-theme');
             
-            if (currentTheme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                toggleButton.innerHTML = '🌙';
-            } else {
+            if (currentTheme === 'light') {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 toggleButton.innerHTML = '☀️';
+            } else if(currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                toggleButton.innerHTML = '🌙';
             }
         });
     }
