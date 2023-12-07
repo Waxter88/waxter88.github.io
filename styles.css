@@ -50,6 +50,7 @@
     --tooltip-text-color-dark: var(--tooltip-text-color-light);
     --contact-button-bg-dark: var(--contact-button-bg-light);
     --nav-toggle-color-dark: var(--nav-toggle-color-light);
+    --footer-color-dark: var(--footer-color-light);
 }
 
 * {
