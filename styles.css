@@ -145,7 +145,6 @@ section {
     grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
 }
 
-
 #projects-section article a{
     text-decoration: none;
 }

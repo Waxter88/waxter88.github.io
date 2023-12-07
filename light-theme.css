@@ -360,7 +360,6 @@ footer p {
         position: sticky;
         top: 0;
         width: 100%; /* Full width */
-        background-color: #333; /* Background of the nav */
         height: 0; /* Initially hidden */
     }
     nav ul {
