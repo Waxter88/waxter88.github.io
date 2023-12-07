@@ -39,9 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
             themeStyleLink.href = 'light-theme.css';
+            // change the icon to a moon text emoji
+            toggleButton.innerHTML = '🌙';
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
             themeStyleLink.href = 'styles.css';
+            // change the icon to a sun text emoji
+            toggleButton.innerHTML = '☀️';
         }
         });
     }
