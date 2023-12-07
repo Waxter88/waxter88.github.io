@@ -233,7 +233,8 @@ h2 a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1em, 1em;
+    /*Padding for the contact icons*/
+    padding: 1em 1em;
 }
 
 #contact {
