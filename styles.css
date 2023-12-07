@@ -110,7 +110,9 @@ nav ul {
 }
 
 .nav-visible {
-    max-height: 300px; /* Adjust as needed to fit content */
+    max-height: 25em; /* Adjust as needed to fit content */
+    width: 100%;
+    padding-bottom: 1em;
     height: auto;
     visibility: visible;
     opacity: 1;
@@ -317,16 +319,19 @@ footer p {
 
 
 #nav-toggle {
-    display: none; /* Hidden by default */
-    font-size: 28px; /* Icon size */
+    display: none;
+    font-size: 28px;
     background: none;
     border: none;
-    color: #fff; /* Icon color */
+    color: #fff; /* Dark text color */
     cursor: pointer;
-    padding: 10px; /* Padding for easier touch */
-    position: absolute; /* Position it absolutely */
-    top: 100%; /* Position right below the header */
-    right: 20px; /* Position from the right */
+    padding: 10px;
+    position: absolute;
+    top: auto;
+    right: 0.05em;
+    z-index: 1001;
+    /* Make Sticky */
+    
 }
 
 #nav-toggle:hover {
@@ -354,22 +359,23 @@ button#theme-toggle  {
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: auto;
+    visibility: hidden; /* CHANGE BACK TO HIDDEN. */
+    width: 6em;
     background-color: #555;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 5p;
+    padding: 5px 5px;
     position: absolute;
-    z-index: 1;
+    z-index: 1002;
     left: 100%;
     margin-left: 10px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 0.8rem;
+    min-width: 5em;
 }
 
 .tooltip:hover .tooltiptext {
@@ -409,6 +415,27 @@ button#theme-toggle  {
     }
     #projects-section {
         grid-template-columns: 1fr; /* On smaller screens, projects are stacked */
+    }
+    /* Display tooltips on the bottom */
+    .tooltip .tooltiptext {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* Change the arrow to the top and point to the top*/
+    .tooltip .tooltiptext::after {
+        top: 100%;
+        right: 50%;
+        margin-top: 0;
+        margin-right: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent; /* Default arrow color, can be overridden */
+        border-top-width: 0;
+        border-bottom-width: 5px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+        transform: translateX(50%);
     }
 }
 
