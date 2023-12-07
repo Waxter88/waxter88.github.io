@@ -17,6 +17,7 @@ body {
 /* Make ALL <a> have no decoration */
 a {
     text-decoration: none;
+    background-color: transparent;
 }
 
 a:visited {
@@ -59,11 +60,6 @@ h2 a:hover {
     transition: color 0.3s ease-in-out;
     background-color: transparent;
 }
-
-h2:hover {
-    background-color: transparent;
-}
-
 
 .header-container {
     text-align: center;
