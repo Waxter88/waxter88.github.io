@@ -153,7 +153,7 @@ section,
 }
 
 .header-container,
-footer {
+footer, footer p {
     background: var(--footer-bg-dark);
     color: var(--footer-color-dark);
 }
