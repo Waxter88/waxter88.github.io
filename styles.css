@@ -237,6 +237,13 @@ h2 a:hover {
 #contact {
     background-color: var(--contact-bg-dark); /* Default to dark theme color */
     color: var(--text-color-dark);
+    display: grid;
+    align-items: center;
+}
+
+#contact-info{
+    margin-bottom: 2em;
+    padding: 1em, 1em;
 }
 
 #about-me {
