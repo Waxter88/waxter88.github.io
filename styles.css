@@ -20,6 +20,7 @@
     --italic-bold-color-dark: #e61f1cd7;
     --header-accent-color-dark: #e6201c;
     --about-me-bg-dark: #1a1a1a;
+    --project-hover-xtra-dark: #000;
 
     /* Light Theme Properties */
     --background-color-light: #f0f0f0;
@@ -35,6 +36,7 @@
     --contact-button-bg-light: #e6201c;
     --nav-toggle-color-light: #333;
     --footer-color-light: #fff;
+    --project-hover-xtra-light: #ffffff;
 }
 
 [data-theme="light"] {
@@ -51,6 +53,7 @@
     --contact-button-bg-dark: var(--contact-button-bg-light);
     --nav-toggle-color-dark: var(--nav-toggle-color-light);
     --footer-color-dark: var(--footer-color-light);
+    --project-hover-xtra-dark: var(--project-hover-xtra-light);
 }
 
 * {
@@ -179,6 +182,11 @@ footer, footer p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+#projects-section a:hover {
+    background-color: var(--project-hover-xtra-dark); /* Slightly lighter on hover for contrast */
+    cursor: pointer; /* Changes the cursor to indicate the item is clickable */
 }
 
 /* Footer ----------------------------*/
