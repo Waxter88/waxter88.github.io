@@ -35,8 +35,8 @@
     --tooltip-text-color-light: #555;
     --contact-button-bg-light: #e6201c;
     --nav-toggle-color-light: #333;
-    --footer-color-light: #fff;
-    --project-hover-xtra-light: #ffffff;
+    --footer-color-light: #000000;
+    --project-hover-xtra-light: #cacaca;
 }
 
 [data-theme="light"] {
@@ -368,7 +368,7 @@ button#theme-toggle {
 
 .contact-button {
     background-color: var(--contact-button-bg-dark);
-    color: var(--background-color-dark);
+    color: var(--nav-toggle-color-dark);
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
