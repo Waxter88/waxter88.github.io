@@ -222,7 +222,7 @@ h2 a:hover {
 #contact-info a:hover,
 .contact-button:hover,
 .contact-link:hover {
-    color: var(--link-hover-color-dark);
+    background-color: var(--link-hover-color-dark);
 }
 
 #projects-section article:hover a,
