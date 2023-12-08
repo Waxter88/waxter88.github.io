@@ -95,7 +95,7 @@ h1 {
 }
 
 h2{
-    color: var(--text-color-dark);
+    color: var(--link-color-dark);
 }
 
 h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::first-letter {
