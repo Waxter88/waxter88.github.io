@@ -220,8 +220,11 @@ h2 a:hover {
 /* Hover Effects and Transitions ----------------------------*/
 
 #contact-info a:hover,
-.contact-button:hover,
 .contact-link:hover {
+    color: var(--link-hover-color-dark);
+}
+
+.contact-button:hover{
     background-color: var(--link-hover-color-dark);
 }
 
