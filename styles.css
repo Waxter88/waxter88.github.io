@@ -15,7 +15,7 @@
     --footer-color-dark: #fff;
     --tooltip-bg-dark: #555;
     --tooltip-text-color-dark: #fff;
-    --contact-button-bg-dark: #b9181698;
+    --contact-button-bg-dark: #b91916;
     --nav-toggle-color-dark: #fff;
     --italic-bold-color-dark: #e61f1cd7;
     --header-accent-color-dark: #e6201c;
@@ -116,7 +116,7 @@ nav {
     display: flex;
     justify-content: center;
     font-weight: 500;
-    padding: 1em, 1em;
+    padding: 1em 1em;
 }
 
 .nav-visible {
@@ -251,14 +251,11 @@ h2 a:hover {
     margin: 0 10px;
 }
 
-#contact {
+#contact, #contact p {
     background-color: var(--contact-bg-dark); /* Default to dark theme color */
     color: var(--text-color-dark);
     display: grid;
     align-items: center;
-}
-
-#contact p{
     text-align: center;
 }
 
