@@ -10,6 +10,7 @@
     --nav-background-color-dark: #333;
     --link-color-dark: #fff;
     --link-hover-color-dark: #C91B18;
+    --link-hover-color-dark-transparent: #c91b18a8;
     --project-bg-dark: #1a1a1aa1;
     --footer-bg-dark: #515151;
     --footer-color-dark: #fff;
@@ -224,7 +225,7 @@ h2 a:hover {
 #theme-toggle:hover {
     /* Add your desired hover styles here */
     color:transparent; /* Hide the SVG's default color */
-    text-shadow: 0 0 0 var(--link-hover-color-dark); /* Add a text shadow with the hover color */
+    text-shadow: 0 0 0 var(--link-hover-color-dark-transparent); /* Add a text shadow with the hover color */
     transform: scale(1.1); /* Example: Slightly increase the size of the button */
     transition: transform 0.3s ease; /* Smooth transition for the hover effect */
     cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
