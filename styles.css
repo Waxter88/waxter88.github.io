@@ -157,8 +157,7 @@ section,
     margin: auto;
 }
 
-.header-container,
-footer, footer p {
+.header-container{
     background: var(--footer-bg-dark);
     color: var(--footer-color-dark);
 }
