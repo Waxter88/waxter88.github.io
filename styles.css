@@ -221,6 +221,12 @@ h2 a:hover {
     background-color: transparent;
 }
 
+#theme-toggle:hover {
+   /* Hover Effect for the theme button toggle SVG */
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
 /* Hover Effects and Transitions ----------------------------*/
 
 #contact-info a:hover,
