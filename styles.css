@@ -183,7 +183,7 @@ section,
     align-items: flex-start;
 }
 
-#projects-section a:hover {
+.project a:hover {
     background-color: var(--project-hover-xtra-dark); /* Slightly lighter on hover for contrast */
     cursor: pointer; /* Changes the cursor to indicate the item is clickable */
 }
