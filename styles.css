@@ -211,10 +211,12 @@ h2 a, #github-title-link {
     background-color: transparent;
 }
 
-#github-title-link:hover {
+#github-title-link:hover, #github-title-link::first-letter:hover {
     color: var(--header-accent-color-dark);
     transition: color 0.3s ease-in-out;
 }
+
+
 
 h2 a:hover {
     color: var(--header-accent-color-dark);
