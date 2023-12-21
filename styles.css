@@ -452,28 +452,5 @@ button#theme-toggle {
 
 /* Include other specific styles or overrides here */
 
-/* Add relative positioning to the h1 element to contain the pseudo-element */
-h1 {
-    position: relative;
-    z-index: 2; /* Ensure the text stays above the pseudo-element */
-}
 
-/* Create the lighting effect using a pseudo-element */
-h1::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 110%; /* Adjust to the size of your h1 */
-    height: 150%; /* Adjust to the size of your h1 */
-    background-color: transparent;
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 0 15px 10px var(--header-accent-color-dark); /* Soft glow effect */
-    z-index: -1;
-    transform: translate(-50%, -50%);
-}
 
-/* Ensure other elements don't overlap the effect */
-.header-container {
-    position: relative;
-}
