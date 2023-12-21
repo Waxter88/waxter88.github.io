@@ -452,3 +452,44 @@ button#theme-toggle {
 
 /* Include other specific styles or overrides here */
 
+/* Spotlight Effect Variables */
+:root {
+    --spotlight-color-dark: rgba(255, 255, 255, 0.2); /* Light spotlight for dark theme */
+    --spotlight-color-light: rgba(0, 0, 0, 0.1); /* Dark spotlight for light theme */
+}
+
+[data-theme="light"] {
+    --spotlight-color-dark: var(--spotlight-color-light); /* Use light theme spotlight color */
+}
+
+/* Spotlight Effect */
+.header-container {
+    position: relative;
+    z-index: 1;
+    background-color: var(--background-color-dark); /* Use the theme background color */
+    overflow: hidden; /* Ensures the spotlight effect doesn't spill outside */
+}
+
+.header-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%; /* Large width to create a broad spotlight */
+    height: 200%; /* Large height to ensure coverage */
+    background-color: var(--spotlight-color-dark); /* Use the theme spotlight color */
+    border-radius: 50%; /* Circular shape for the spotlight */
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0); /* Center and scale down the spotlight */
+    transition: transform 0.5s ease; /* Smooth transition for the spotlight effect */
+}
+
+.header-container:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale up the spotlight on hover */
+}
+
+/* Ensure text and other elements are visible above the spotlight */
+.header-container * {
+    position: relative;
+    z-index: 2;
+}
