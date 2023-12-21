@@ -451,21 +451,4 @@ button#theme-toggle {
 /* Additional Styles ----------------------------*/
 
 /* Include other specific styles or overrides here */
-/* Keyframes for the dynamic glow effect */
-@keyframes dynamicGlow {
-    0% {
-        text-shadow: 0 0 10px var(--header-accent-color-dark), 0 0 20px var(--header-accent-color-dark), 0 0 30px var(--header-accent-color-dark), 0 0 40px var(--header-accent-color-dark), 0 0 50px var(--header-accent-color-dark), 0 0 60px var(--header-accent-color-dark), 0 0 70px var(--header-accent-color-dark);
-    }
-    50% {
-        text-shadow: 0 0 5px var(--header-accent-color-dark), 0 0 10px var(--header-accent-color-dark), 0 0 15px var(--header-accent-color-dark), 0 0 20px var(--header-accent-color-dark), 0 0 25px var(--header-accent-color-dark), 0 0 30px var(--header-accent-color-dark), 0 0 35px var(--header-accent-color-dark);
-    }
-    100% {
-        text-shadow: 0 0 10px var(--header-accent-color-dark), 0 0 20px var(--header-accent-color-dark), 0 0 30px var(--header-accent-color-dark), 0 0 40px var(--header-accent-color-dark), 0 0 50px var(--header-accent-color-dark), 0 0 60px var(--header-accent-color-dark), 0 0 70px var(--header-accent-color-dark);
-    }
-}
-
-/* Apply the glow effect to the h1 header */
-h1 {
-    animation: dynamicGlow 2s ease-in-out infinite alternate;
-}
 
