@@ -98,20 +98,42 @@ h1 {
     padding: 5px; /* Adjust as needed */
 }
 
+/* First Line */
+header h1::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 120%;
+    background-color: var(--header-accent-color-dark);
+    bottom: -5px;
+    left: -10%;
+    opacity: 0.5;
+    animation: slide 4s infinite linear;
+}
+
+/* Second Line */
 header h1::after {
     content: '';
     position: absolute;
-    height: 2px; /* Thickness of the line */
-    width: 100%; /* Line width to match the text width */
-    background-color: var(--header-accent-color-dark); /* Line color */
-    bottom: 0; /* Position the line under the text */
-    left: 0;
-    animation: moveLine 3s infinite alternate ease-in-out;
+    height: 1px;
+    width: 120%;
+    background-color: var(--header-accent-color-dark);
+    top: -5px;
+    left: -10%;
+    opacity: 0.5;
+    animation: slideReverse 6s infinite linear;
 }
 
-@keyframes moveLine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+/* Animation for the first line */
+@keyframes slide {
+    0%, 100% { transform: translateX(-50%); }
+    50% { transform: translateX(50%); }
+}
+
+/* Animation for the second line */
+@keyframes slideReverse {
+    0%, 100% { transform: translateX(50%); }
+    50% { transform: translateX(-50%); }
 }
 
 h2{
