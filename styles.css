@@ -96,6 +96,10 @@ h1 {
     position: relative;
     display: inline-block; /* Allows the line to fit the width of the text */
     padding: 5px; /* Adjust as needed */
+    /* Center the text */
+    text-align: center;
+    
+    
 }
 
 /* First Line */
