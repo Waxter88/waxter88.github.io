@@ -93,6 +93,25 @@ h1 {
     letter-spacing: 0.75rem;
     font-size: 7rem;
     color: var(--header-accent-color-dark);
+    position: relative;
+    display: inline-block; /* Allows the line to fit the width of the text */
+    padding: 5px; /* Adjust as needed */
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    height: 2px; /* Thickness of the line */
+    width: 100%; /* Line width to match the text width */
+    background-color: #4A90E2; /* Line color */
+    bottom: 0; /* Position the line under the text */
+    left: 0;
+    animation: moveLine 3s infinite alternate ease-in-out;
+}
+
+@keyframes moveLine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 h2{
