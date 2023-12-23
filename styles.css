@@ -107,7 +107,7 @@ header h1::before {
     bottom: -5px;
     left: -10%;
     opacity: 0.5;
-    animation: slide 4s infinite linear;
+    animation: slide 10s infinite linear;
 }
 
 /* Second Line */
@@ -120,7 +120,7 @@ header h1::after {
     top: -5px;
     left: -10%;
     opacity: 0.5;
-    animation: slideReverse 6s infinite linear;
+    animation: slideReverse 8s infinite linear;
 }
 
 /* Animation for the first line */
