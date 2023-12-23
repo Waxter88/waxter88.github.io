@@ -216,7 +216,7 @@ h2 a, #github-title-link {
     transition: color 0.3s ease-in-out;
 }
 
-#github-title-link::first-letter:hover{
+#github-title-link:first-letter:hover{
     color: var(--link-color-dark);
     transition: color 0.3s ease-in-out;
 }
