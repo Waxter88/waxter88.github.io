@@ -103,7 +103,7 @@ header h1::after {
     position: absolute;
     height: 2px; /* Thickness of the line */
     width: 100%; /* Line width to match the text width */
-    background-color: #4A90E2; /* Line color */
+    background-color: var(--header-accent-color-dark); /* Line color */
     bottom: 0; /* Position the line under the text */
     left: 0;
     animation: moveLine 3s infinite alternate ease-in-out;
