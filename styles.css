@@ -96,10 +96,20 @@ h1 {
 }
 
 header h1 {
-    background: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.3) 100%);
     background-size: 200% auto;
-    color: var(--header-accent-color-dark);
     animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        color: var(--header-accent-color-dark);
+    }
+    50% {
+        color: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.3) 100%);
+    }
+    100% {
+        color: var(--header-accent-color-dark);
+    }
 }
 
 h2{
@@ -405,13 +415,6 @@ button#theme-toggle {
     border-width: 1px;
     border-style: solid;
 }
-
-@keyframes shine {
-    0% { background-position: -500px; }
-    100% { background-position: 500px; }
-}
-
-
 
 
 /* Media Queries ----------------------------*/
