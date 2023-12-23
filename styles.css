@@ -95,6 +95,13 @@ h1 {
     color: var(--header-accent-color-dark);
 }
 
+header h1 {
+    background: linear-gradient(90deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.3) 100%);
+    background-size: 200% auto;
+    color: var(--header-accent-color-dark);
+    animation: shine 5s linear infinite;
+}
+
 h2{
     color: var(--link-color-dark);
 }
@@ -398,6 +405,14 @@ button#theme-toggle {
     border-width: 1px;
     border-style: solid;
 }
+
+@keyframes shine {
+    0% { background-position: -500px; }
+    100% { background-position: 500px; }
+}
+
+
+
 
 /* Media Queries ----------------------------*/
 
