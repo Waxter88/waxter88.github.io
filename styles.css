@@ -65,7 +65,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.6;
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
@@ -368,6 +368,16 @@ button#theme-toggle {
 
 /* Icon and Button Styles ----------------------------*/
 
+#about-toggle{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .contact-icon {
     display: flex;
     align-items: center;
@@ -389,6 +399,15 @@ button#theme-toggle {
     text-align: center;
     margin-top: 40px;
 }
+
+#about-toggle-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
 
 .contact-button {
     background-color: var(--contact-button-bg-dark);

@@ -67,5 +67,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
         
+
+    document.getElementById('about-toggle').addEventListener('click', function() {
+        var moreText = document.getElementById('more-about');
+        if (moreText.style.display === "none") {
+            moreText.style.display = "block";
+            this.textContent = "Read Less";
+        } else {
+            moreText.style.display = "none";
+            this.textContent = "Read More";
+        }
+    });
+    
       
 });
