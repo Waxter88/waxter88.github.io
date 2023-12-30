@@ -273,6 +273,8 @@ h2 a:hover {
 
 #contact-info svg{
     margin: 0 10px;
+    width: 50px;
+    height: 35px;
 }
 
 #contact, #contact p {
@@ -418,6 +420,7 @@ button#theme-toggle {
     border-color: var(--header-accent-color-dark);
     border-width: 1px;
     border-style: solid;
+    width: 150px;
 }
 
 
