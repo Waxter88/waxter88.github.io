@@ -65,11 +65,10 @@
 
 body, button {
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 21px;
     line-height: 1.6;
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
-    
 }
 
 a {
