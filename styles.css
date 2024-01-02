@@ -401,6 +401,7 @@ button#theme-toggle {
 .contact-button-container {
     text-align: center;
     margin-top: 40px;
+    margin-bottom:2rem;
 }
 
 #about-toggle-container {
@@ -422,9 +423,17 @@ button#theme-toggle {
     border-style: solid;
 }
 
-#about-me-container{
+#about-me-container, #more-about{
     text-decoration: none;
     padding: 1rem;
+}
+
+button svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; /* Center the icon horizontally */
 }
 
 /* Media Queries ----------------------------*/

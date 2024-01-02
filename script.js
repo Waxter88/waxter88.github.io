@@ -72,10 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
         var moreText = document.getElementById('more-about');
         if (moreText.style.display === "none") {
             moreText.style.display = "block";
-            this.textContent = "Read Less";
+
+            this.innerHTML = "Read Less " + feather.icons['chevron-up'].toSvg();   
+
+            
         } else {
             moreText.style.display = "none";
-            this.textContent = "Read More";
+            this.innerHTML = "Read More " + feather.icons['chevron-down'].toSvg();
         }
     });
     
