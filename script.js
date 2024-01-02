@@ -28,29 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.log('Error fetching GitHub repositories:', error));
 
-    
-    /*
-    var toggleButton = document.getElementById('theme-toggle');
-    var themeStyleLink = document.getElementById('theme-style');
-    
-    if (toggleButton && themeStyleLink) {
-        toggleButton.addEventListener('click', function() {
-        var currentTheme = document.documentElement.getAttribute('data-theme');
-        
-        if (currentTheme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            themeStyleLink.href = 'light-theme.css';
-            // change the icon to a moon text emoji
-            toggleButton.innerHTML = '🌙';
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            themeStyleLink.href = 'styles.css';
-            // change the icon to a sun text emoji
-            toggleButton.innerHTML = '☀️';
-        }
-        });
-    }
-    */
+
     var toggleButton = document.getElementById('theme-toggle');
 
     if (toggleButton) {
@@ -72,10 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var moreText = document.getElementById('more-about');
         if (moreText.style.display === "none") {
             moreText.style.display = "block";
-
             this.innerHTML = "Read Less " + feather.icons['chevron-up'].toSvg();   
-
-            
         } else {
             moreText.style.display = "none";
             this.innerHTML = "Read More " + feather.icons['chevron-down'].toSvg();
