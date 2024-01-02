@@ -412,7 +412,6 @@ button#theme-toggle {
     margin-top: 40px;
 }
 
-
 .contact-button {
     background-color: var(--contact-button-bg-dark);
     color: #fff;
@@ -424,6 +423,10 @@ button#theme-toggle {
     border-style: solid;
 }
 
+#about-me-container{
+    text-decoration: none;
+    padding: 1rem;
+}
 
 /* Media Queries ----------------------------*/
 
