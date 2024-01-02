@@ -63,12 +63,13 @@
     padding: 0;
 }
 
-body {
+body, button {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     line-height: 1.6;
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
+    
 }
 
 a {
@@ -155,7 +156,7 @@ section,
 .header-container,
 #contact,
 #about-me .container {
-    padding: 20px;
+    padding: 20px, 20px;
     max-width: 100%;
     margin: auto;
 }
@@ -172,12 +173,12 @@ section,
     grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
     gap: 20px;
     justify-content: center;
+    margin: 2rem;
 }
 
 .project {
     background-color: var(--project-bg-dark);
-    padding: 2rem;
-    margin-bottom: 1rem;
+    padding: 2rem;  
     border-radius: 0.5rem;
     border: 2px solid var(--header-border-color-dark);
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -283,6 +284,7 @@ h2 a:hover {
     display: grid;
     align-items: center;
     text-align: center;
+    margin: 1rem;
 }
 
 #about-me {
@@ -420,7 +422,6 @@ button#theme-toggle {
     border-color: var(--header-accent-color-dark);
     border-width: 1px;
     border-style: solid;
-    width: 150px;
 }
 
 
