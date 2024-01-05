@@ -84,7 +84,6 @@ i, strong {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
-    margin-bottom: 1rem;
     letter-spacing: 0.1rem;
     text-align: center;
 }
@@ -409,7 +408,7 @@ button#theme-toggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin: 5vh;
 }
 
 .contact-button {
@@ -423,9 +422,15 @@ button#theme-toggle {
     border-style: solid;
 }
 
-#about-me-container, #more-about{
+#about-me-container, #more-about {
     text-decoration: none;
     padding: 1rem;
+    margin: 0 auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+
 }
 
 button svg{
@@ -457,6 +462,9 @@ button svg{
     #projects-section {
         grid-template-columns: 1fr; /* On smaller screens, projects are stacked */
     }
+    #about-me-container{
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -483,6 +491,7 @@ button svg{
     .project {
         padding: 1rem;
     }
+
 }
 
 /* Additional Styles ----------------------------*/
