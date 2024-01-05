@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
         
-
     document.getElementById('about-toggle').addEventListener('click', function() {
         var moreText = document.getElementById('more-about');
         if (moreText.style.display === "none") {

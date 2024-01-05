@@ -16,7 +16,7 @@
     --footer-color-dark: #fff;
     --tooltip-bg-dark: #555;
     --tooltip-text-color-dark: #fff;
-    --contact-button-bg-dark: #b91916;
+    --contact-button-bg-dark: #4e0100;
     --nav-toggle-color-dark: #fff;
     --italic-bold-color-dark: #e61f1cd7;
     --header-accent-color-dark: #f1231f;
@@ -111,7 +111,7 @@ h2::first-letter, h3::first-letter, h4::first-letter, h5::first-letter, h6::firs
 /* Navigation ----------------------------*/
 
 nav {
-    background-color: var(--nav-background-color-dark);
+    /*background-color: var(--nav-background-color-dark);*/
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
@@ -161,7 +161,7 @@ section,
 }
 
 .header-container{
-    background: var(--footer-bg-dark);
+    /*background: var(--footer-bg-dark);*/
     color: var(--footer-color-dark);
 }
 
