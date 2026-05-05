@@ -588,6 +588,33 @@ img {
     line-height: 1.8;
 }
 
+.about__education {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.edu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.edu-item__degree {
+    font-size: 0.9rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.edu-item__school {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.04em;
+}
+
 .about__skills {
     display: flex;
     flex-direction: column;
@@ -626,6 +653,30 @@ img {
     height: 4px;
     background: var(--text-tertiary);
     border-radius: 50%;
+}
+.cert-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cert-badge-wrap {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+}
+
+.cert-badge-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.cert-badge-wrap:hover .cert-badge-img {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 /* ========== WORK / GITHUB ========== */

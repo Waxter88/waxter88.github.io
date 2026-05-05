@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRevealAnimations();
     fetchGitHubData();
     updateFooterYear();
+    initBadge();
 });
 
 /**
@@ -95,6 +96,34 @@ function initTheme() {
             setTheme(e.matches ? 'dark' : 'light');
         }
     });
+}
+
+/**
+ * Credly Badge
+ * Sets allowtransparency on the iframe so the badge renders with a transparent background
+ */
+function initBadge() {
+    const container = document.getElementById('azure-badge');
+    if (!container) return;
+
+    const applyTransparency = () => {
+        const iframe = document.getElementById('embedded-badge-8b1faf23-3fe2-46e0-8b53-8ba530f416db');
+        if (iframe) {
+            iframe.style.borderRadius = '50%';
+            iframe.style.overflow = 'hidden';
+            iframe.style.width = '90px';
+            iframe.style.height = '90px';
+            return true;
+        }
+        return false;
+    };
+
+    if (!applyTransparency()) {
+        const observer = new MutationObserver(() => {
+            if (applyTransparency()) observer.disconnect();
+        });
+        observer.observe(container, { childList: true, subtree: true });
+    }
 }
 
 /**
