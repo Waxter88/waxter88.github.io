@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Jackson Pipe — social card source</title>
+<!--
+  Source for assets/og-card.png, rendered once at 1200x630 and committed.
+  Not linked from the site and not part of the runtime; see README.
+-->
+<style>
+@font-face { font-family: Manrope; src: url('../fonts/manrope.woff2') format('woff2'); font-style: normal; font-weight: 400 800; }
+:root {
+  --paper: #f5f3ee; --ink: #242922; --muted: #62695d; --accent: #aa422c; --rule: #d4d7cc;
+  --font: Manrope, 'Segoe UI', Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; }
+body { width: 1200px; height: 630px; background: var(--paper); color: var(--muted);
+       font: 400 22px/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+.card { width: 100%; height: 100%; padding: 72px 88px; display: flex; flex-direction: column;
+        justify-content: space-between; }
+.top { display: flex; align-items: baseline; justify-content: space-between; }
+.mark { color: var(--ink); font-size: 48px; font-weight: 800; letter-spacing: -.09em; line-height: 1; }
+.mark span { color: var(--accent); }
+.domain { font: 24px var(--mono); color: var(--muted); letter-spacing: .02em; }
+.plate { position: relative; border-bottom: 1px solid var(--rule); padding-bottom: 28px; }
+.plate::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 88px; height: 3px; background: var(--accent); }
+h1 { color: var(--ink); font-size: 116px; font-weight: 500; letter-spacing: -.045em; line-height: 1; }
+.meta { display: flex; gap: 40px; margin-top: 28px; font-size: 30px; }
+.meta b { color: var(--ink); font-weight: 600; }
+.work { display: flex; gap: 32px; font: 22px var(--mono); color: var(--muted); }
+.work span:not(:last-child)::after { content: ' ·'; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <div class="mark">jp<span>.</span></div>
+      <div class="domain">jacksonpipe.dev</div>
+    </div>
+    <div>
+      <div class="plate"><h1>Jackson Pipe</h1></div>
+      <p class="meta"><b>Software developer</b><span>Hamilton, Ontario</span></p>
+    </div>
+    <div class="work">
+      <span>Investing Stats</span><span>Brawl Stats</span><span>StarCraft II agents</span>
+    </div>
+  </div>
+</body>
+</html>

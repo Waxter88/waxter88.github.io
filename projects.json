@@ -26,6 +26,10 @@
     "lead": "I built a Brawl Stars analytics app that compares characters and recommends teams for a selected map.",
     "work": "Full-stack application & modelling",
     "stack": "TypeScript / React / Next.js / SQLite",
+    "link": {
+      "href": "https://brawlstars-stats.fly.dev/",
+      "label": "Visit the application"
+    },
     "description": "Inside Brawl Stats: Jackson Pipe’s work on battle-data collection, sample-aware rankings, team recommendations, and cache invalidation.",
     "ogDescription": "Separating character strength, team interactions, and the amount of evidence behind a recommendation."
   },

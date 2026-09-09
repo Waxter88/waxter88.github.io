@@ -22,6 +22,7 @@ from collections import OrderedDict
 SITE_URL = 'https://jacksonpipe.dev'
 EMAIL = 'jackbpipe@gmail.com'
 BYLINE = 'Jackson Pipe'
+CARD_ALT = 'Jackson Pipe, software developer, Hamilton, Ontario.'
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, 'projects.json')
@@ -116,6 +117,13 @@ PAGE = """<!doctype html>
   <meta property="og:title" content="{page_title}">
   <meta property="og:description" content="{og_description}">
   <meta property="og:url" content="{url}">
+  <meta property="og:site_name" content="{byline}">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:image" content="{card}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{card_alt}">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="{url}">
   <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
@@ -184,6 +192,8 @@ def render_page(project, projects):
         lead=esc(project['lead']),
         meta=render_meta(project),
         body=read(body_path).rstrip('\n'),
+        card='%s/assets/og-card.png' % SITE_URL,
+        card_alt=attr(CARD_ALT),
         next_slug=following['slug'],
         next_label='Another project' if wrapped else 'Next project',
         next_title=esc(following['title']),
@@ -192,12 +202,30 @@ def render_page(project, projects):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# Crawl files — the same pages the directory links to, in the same order
+# ══════════════════════════════════════════════════════════════════════════════
+def render_sitemap(projects):
+    """No lastmod: an invented date would be worse than none at all."""
+    pages = ['%s/' % SITE_URL] + ['%s/work/%s/' % (SITE_URL, p['slug']) for p in projects]
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + ''.join('  <url><loc>%s</loc></url>\n' % page for page in pages)
+            + '</urlset>\n')
+
+
+def render_robots():
+    return 'User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' % SITE_URL
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Build
 # ══════════════════════════════════════════════════════════════════════════════
 def build(check=False):
     projects = load_projects()
 
-    outputs = [(HOME, render_home(projects))]
+    outputs = [(HOME, render_home(projects)),
+               (os.path.join(ROOT, 'sitemap.xml'), render_sitemap(projects)),
+               (os.path.join(ROOT, 'robots.txt'), render_robots())]
     for project in projects:
         outputs.append((os.path.join(ROOT, 'work', project['slug'], 'index.html'),
                         render_page(project, projects)))
