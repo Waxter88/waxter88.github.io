@@ -236,7 +236,7 @@ def build(output='Resume_Jackson-Pipe.pdf'):
 
     story.append(KeepTogether([
         *job_entry('Software Developer', 'Niagara College Canada',
-                   'Welland, ON', 'Sep 2021 \u2013 Apr 2023'),
+                   'Welland, ON', 'Sep 2020 \u2013 Apr 2022'),
         b('Led a cross-functional team of 5 in Agile/Scrum to architect and deliver a full-stack '
           'business-management platform for a local small-business client, on time and within scope.'),
         b('Designed and built core modules: POS system, inventory and supply-chain management, '
