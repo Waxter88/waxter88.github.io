@@ -1,0 +1,39 @@
+        <figure class="article-visual application-shot investing-stats-shot">
+                <a href="../../assets/investing-stats.webp" aria-label="Open the Investing Stats screenshot at full size"><img src="../../assets/investing-stats.webp" alt="Investing Stats interface with transaction filters, a buy/sell summary, export links, and a table of filed transactions." width="1280" height="1100" fetchpriority="high" decoding="async"></a>
+                <figcaption>Transaction explorer · September 9, 2026 snapshot. <a href="../../assets/investing-stats.webp">View full-size image</a>.</figcaption>
+              </figure>
+        <div class="article-layout"><aside class="article-index" aria-label="Case study contents"><p class="eyebrow">In this project</p><nav aria-label="On this page"><a href="#problem"><span>01</span>The problem</a><a href="#pipeline"><span>02</span>Import pipeline</a><a href="#failure"><span>03</span>Failure handling</a><a href="#parsing"><span>04</span>Parsing & testing</a><a href="#limits"><span>05</span>Current scope</a></nav></aside>
+          <div class="prose">
+            <section id="problem">
+              <h2>From filings to transactions</h2>
+              <p>SEC Form 4 filings report changes in company insiders’ ownership. The source is a collection of XML documents; the app turns those documents into records you can search by company, date, transaction type, or value.</p>
+              <p>I built the importer, storage and query layers, and Next.js interface. The browser, API, and exports all read from the same SQLite database, so a transaction gets the same interpretation in each view.</p>
+              
+            </section>
+            <section id="pipeline">
+              <h2>Making imports repeatable</h2>
+              <p>The importer discovers filings, finds their XML, and extracts transactions. It then adds issuer information where available and saves the records to SQLite.</p>
+              <p>Transaction IDs prevent retries from inserting duplicate rows. Historical backfills track completed days so an interrupted run can pick up the remaining dates. Concurrent import requests also share the same in-flight work within a server process.</p>
+              <figure class="diagram">
+                <ol class="flow"><li><strong>Discover &amp; parse:</strong> filing feeds and indexes, ownership XML.</li><li><strong>Persist:</strong> transactions, issuer information, import progress.</li><li><strong>Query:</strong> filtered views, company histories, CSV / feeds.</li></ol>
+                <figcaption>Scheduled imports write to SQLite; the interface and exports read from it.</figcaption>
+              </figure>
+            </section>
+            <section id="failure">
+              <h2>When a refresh fails</h2>
+              <p>A failed SEC fetch shouldn’t prevent someone from searching records already in the database. I separated refreshes from reads: scheduled imports update the history, while normal page requests use the stored data. Refresh errors appear in the health endpoint.</p>
+              <p>For deployments that refresh on read, failed attempts trigger a backoff period. That keeps every new visitor from starting another slow request during an upstream outage. An empty database still needs a successful first import before it can serve results.</p>
+            </section>
+            <section id="parsing">
+              <h2>Parsing missing values</h2>
+              <p>XML numbers can arrive as plain values, nested values, or text inside an object. I added parsing helpers and tests for those shapes, including empty and malformed fields. Missing values stay missing instead of silently becoming zero.</p>
+              <p>I also checked how issuer data affects older transactions. A current share count can make a historical comparison misleading, so the app suppresses that comparison when the dates don’t line up. Query tests cover parameter binding and search wildcards.</p>
+            </section>
+            <section id="limits">
+              <h2>Current scope</h2>
+              <p>The app supports transaction search, company histories, analytics queries, and exports. It runs with SQLite on persistent storage, with no separate database service.</p>
+              <p>Data freshness depends on the imports, and issuer details aren’t always available. A remaining interface improvement is to make older or incomplete data easier to spot.</p>
+              <p class="reading-note">Project notes · September 2026</p>
+            </section>
+          </div>
+        </div>

@@ -1,0 +1,49 @@
+[
+  {
+    "slug": "investing-stats",
+    "title": "Investing Stats",
+    "summary": "Search and explore SEC insider transactions.",
+    "tech": "TypeScript / Next.js",
+    "year": "2026",
+    "eyebrow": "Investing Stats · Financial data",
+    "lead": "I built a searchable history of SEC insider transactions, with company filters, filing details, and CSV exports.",
+    "work": "Application & data pipeline",
+    "stack": "TypeScript / Next.js / SQLite",
+    "link": {
+      "href": "https://investing-stats.fly.dev/",
+      "label": "Visit the application"
+    },
+    "description": "How Jackson Pipe built Investing Stats: SEC filing ingestion, SQLite persistence, failure handling, and a searchable transaction history.",
+    "ogDescription": "Making public filings searchable, and keeping stored history useful when a refresh fails."
+  },
+  {
+    "slug": "brawl-stats",
+    "title": "Brawl Stats",
+    "summary": "Game analytics and team recommendations.",
+    "tech": "TypeScript / React",
+    "year": "2026",
+    "eyebrow": "Brawl Stats · Game analytics",
+    "lead": "I built a Brawl Stars analytics app that compares characters and recommends teams for a selected map.",
+    "work": "Full-stack application & modelling",
+    "stack": "TypeScript / React / Next.js / SQLite",
+    "description": "Inside Brawl Stats: Jackson Pipe’s work on battle-data collection, sample-aware rankings, team recommendations, and cache invalidation.",
+    "ogDescription": "Separating character strength, team interactions, and the amount of evidence behind a recommendation."
+  },
+  {
+    "slug": "starcraft",
+    "title": "StarCraft II agents",
+    "summary": "Scripted bots, learned policies, and replay training.",
+    "tech": "Python / PyTorch",
+    "year": [
+      "2024",
+      "2026"
+    ],
+    "eyebrow": "SpecTactics / μSC2 / Augur · StarCraft II",
+    "lead": "Three projects exploring StarCraft II bots: scripted strategy, learned action policies, and training from replays.",
+    "work": "Agent systems & learning experiments",
+    "stack": "Python / PyTorch / StarCraft II",
+    "note": "Ongoing work",
+    "description": "Jackson Pipe’s StarCraft II engineering notes: SpecTactics, μSC2/MuBot, and Augur; stale game state, action selection, and replay-training experiments.",
+    "ogDescription": "Three approaches to playing under uncertainty, and the difficulty of knowing whether a change helps."
+  }
+]

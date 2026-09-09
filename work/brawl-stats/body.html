@@ -1,0 +1,37 @@
+        <figure class="article-visual application-shot brawl-stats-shot"><a href="../../assets/brawl-stats.png" aria-label="Open the Brawl Stats screenshot at full size"><img src="../../assets/brawl-stats.png" alt="Brawl Stats map selection, draft controls, and suggested team." width="1361" height="956" fetchpriority="high" decoding="async"></a><figcaption>Team recommender · June 2026 development build. <a href="../../assets/brawl-stats.png">View full-size image</a>.</figcaption></figure>
+        <div class="article-layout"><aside class="article-index" aria-label="Case study contents"><p class="eyebrow">In this project</p><nav aria-label="On this page"><a href="#problem"><span>01</span>The problem</a><a href="#model"><span>02</span>Recommendation model</a><a href="#pipeline"><span>03</span>Data & caching</a><a href="#testing"><span>04</span>Testing the model</a><a href="#limits"><span>05</span>Current limitations</a></nav></aside>
+          <div class="prose">
+            <section id="problem">
+              <h2>Overview</h2>
+              <p>A team with a handful of wins can top a raw win-rate table. That doesn’t tell a player much about how it compares with a team that has hundreds of recorded matches.</p>
+              <p>I worked on the battle-data collection, SQLite queries, recommendation model, and React interface. The main challenge was scoring teams with very different amounts of evidence, including combinations the dataset hadn’t seen.</p>
+              
+            </section>
+            <section id="model">
+              <h2>Separating character strength from synergy</h2>
+              <p>Two strong characters may win together because each is strong individually. I built the model to estimate individual character effects and pair interactions together, so it can account for both.</p>
+              <p>When there are few matches for a map, estimates draw on broader mode and global data. The final team score blends the model’s prediction with that trio’s recorded results. Teams with more observations rely more on their own record; sparse teams rely more on the model.</p>
+              <p>The fitting code is plain TypeScript, separate from the database and cache. I can test it with controlled inputs without running the app or collecting new battles.</p>
+              <figure class="diagram">
+                <ol class="flow"><li><strong>Observe:</strong> team outcomes, map and mode, sample counts.</li><li><strong>Estimate:</strong> individual strength, pair interactions, broader priors.</li><li><strong>Recommend:</strong> score candidate teams, blend with their records.</li></ol>
+                <figcaption>Candidate scores combine model estimates with each team’s recorded results.</figcaption>
+              </figure>
+            </section>
+            <section id="pipeline">
+              <h2>Updating results after collection</h2>
+              <p>Collection scripts write battle records to SQLite. The server aggregates those records into character statistics, map comparisons, and team scores, then caches the results in memory.</p>
+              <p>A timer alone could leave the app showing old rankings after a collection finished. I made the cache also check the latest completed collection timestamp. That timestamp has a short cache of its own to avoid a database lookup on every request. Restarting the server clears both caches.</p>
+            </section>
+            <section id="testing">
+              <h2>Testing the model</h2>
+              <p>I used synthetic teams with known character strengths and pair effects to check whether the model could recover each signal. Other tests cover numeric transformations and small samples.</p>
+              <p>Separate data-quality checks look at freshness, coverage, and observation counts. The project also includes held-out validation tools, but I don’t yet have a recorded result that supports a claim about future-match accuracy.</p>
+            </section>
+            <section id="limits">
+              <h2>Interpreting the scores</h2>
+              <p>The app can suggest a team it hasn’t directly observed by using evidence about its members. That score is a prediction, not a measured win rate for the trio.</p>
+              <p>Player skill, character selection, and balance patches all affect the records. The next evaluation I want to run is a time-separated comparison across game updates to see how well the recommendations hold up.</p>
+              <p class="reading-note">Project notes · September 2026</p>
+            </section>
+          </div>
+        </div>
