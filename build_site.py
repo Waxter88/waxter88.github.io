@@ -128,7 +128,7 @@ PAGE = """<!doctype html>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site">
     <header class="masthead">
-      <a class="wordmark" href="../../" aria-label="{byline}, home"><span class="brand-mark" aria-hidden="true">jp<span>.</span></span><span>{byline}</span></a>
+      <a class="wordmark" href="../../" aria-label="{byline}, home"><span class="brand-mark" aria-hidden="true">jp<span>.</span></span></a>
       <nav aria-label="Main navigation"><a href="../../#about">Background</a><a href="../../#work">Projects</a><a href="../../#contact">Contact</a><a class="nav-resume" href="../../Resume_Jackson-Pipe.pdf">Résumé <span aria-hidden="true">↗</span></a></nav>
     </header>
     <main id="main" tabindex="-1">
