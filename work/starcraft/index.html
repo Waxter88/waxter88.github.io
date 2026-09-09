@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Jackson Pipe’s StarCraft II engineering notes: SpecTactics, μSC2/MuBot, and Augur; stale game state, action selection, and replay-training experiments.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="StarCraft II agents — Jackson Pipe">
+  <meta property="og:description" content="Three approaches to playing under uncertainty, and the difficulty of knowing whether a change helps.">
+  <meta property="og:url" content="https://jacksonpipe.dev/work/starcraft/">
+  <link rel="canonical" href="https://jacksonpipe.dev/work/starcraft/">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1d201e" media="(prefers-color-scheme: dark)">
+  <link rel="preload" href="../../assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../styles.css">
+  <title>StarCraft II agents — Jackson Pipe</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site">
+    <header class="masthead">
+      <a class="wordmark" href="../../" aria-label="Jackson Pipe, home"><span class="brand-mark" aria-hidden="true">jp<span>.</span></span><span>Jackson Pipe</span></a>
+      <nav aria-label="Main navigation"><a href="../../#about">Background</a><a href="../../#work">Projects</a><a href="../../#contact">Contact</a><a class="nav-resume" href="../../Resume_Jackson-Pipe.pdf">Résumé <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <a class="back-link" href="../../#work"><span aria-hidden="true">←</span> All projects</a>
+      <article>
+        <header class="article-header">
+          <p class="eyebrow">SpecTactics / μSC2 / Augur · StarCraft II</p>
+          <h1>StarCraft II agents</h1>
+          <p class="article-lead">Three projects exploring StarCraft II bots: scripted strategy, learned action policies, and training from replays.</p>
+          <div class="article-meta"><span><strong>Work</strong> Agent systems &amp; learning experiments</span><span>Python / PyTorch / StarCraft II</span><span>Ongoing work</span></div>
+        </header>
+        <figure class="article-visual agent-hero"><div class="agent-art"><div class="art-topline"><span>Agent systems</span><span>SC II / Python</span></div><p class="agent-art-title">Agent decision loop</p><ol class="agent-cycle"><li><span>01 / Input</span><strong>Observe</strong></li><li><span>02 / Policy</span><strong>Decide</strong></li><li><span>03 / Output</span><strong>Act</strong></li></ol><div class="agent-feedback"><span aria-hidden="true">↳</span> Updated game state <span aria-hidden="true">↲</span></div><div class="agent-methods"><div><strong>SpecTactics</strong><span>Scripted strategy</span></div><div><strong>μSC2</strong><span>Learned policy</span></div><div><strong>Augur</strong><span>Replay learning</span></div></div></div><figcaption>Conceptual agent loop · Three independent implementations, each with its own evaluation.</figcaption></figure>
+        <div class="article-layout"><aside class="article-index" aria-label="Case study contents"><p class="eyebrow">In this project</p><nav aria-label="On this page"><a href="#approaches"><span>01</span>Three approaches</a><a href="#state"><span>02</span>State & correctness</a><a href="#actions"><span>03</span>Action selection</a><a href="#evaluation"><span>04</span>Evaluation</a><a href="#limits"><span>05</span>Current work</a></nav></aside>
+          <div class="prose">
+            <section id="approaches">
+              <h2>Three ways to build a bot</h2>
+              <p>StarCraft II combines economy management, unit control, and an opponent you can’t fully see. I use it to work on the code that runs an agent and the decisions that agent makes.</p>
+              <p>SpecTactics is a scripted Zerg bot with separate world-state, tactics, strategy, and runtime layers. μSC2 (MuBot) explores a compact learned policy. Augur focuses on replay-based training within a consumer-GPU budget. They’re separate implementations, each testing a different approach.</p>
+              <figure class="diagram">
+                <table class="figure-table"><thead><tr><th scope="col">Project</th><th scope="col">Approach</th><th scope="col">Central question</th></tr></thead><tbody><tr><td>SpecTactics</td><td>Explicit strategy and tactics</td><td>Can the decisions survive a real game?</td></tr><tr><td>μSC2 / MuBot</td><td>Compact learned action policy</td><td>How should the policy represent a player’s choices?</td></tr><tr><td>Augur</td><td>Replay-based learning experiments</td><td>What can a replay-trained policy learn?</td></tr></tbody></table>
+                <figcaption>Each project has its own implementation and evaluation.</figcaption>
+              </figure>
+            </section>
+            <section id="state">
+              <h2>Fixing stale-state distance queries</h2>
+              <p>SpecTactics remembers enemy units after they leave vision. A bug appeared when those remembered units reached the game library’s distance function: it could use a distance matrix rebuilt for the current frame, while the remembered unit still held an index from an older frame.</p>
+              <p>The result could be an error or a believable distance to the wrong unit. I changed those queries to use positions instead of stale unit indexes.</p>
+              <p>The test double had hidden the bug by always calculating distances geometrically. I updated it to reproduce the library’s stale-object behavior so the test could catch the actual failure.</p>
+            </section>
+            <section id="actions">
+              <h2>Choosing a unit, ability, and target</h2>
+              <p>In μSC2, each action depends on several choices: which unit acts, which ability it uses, and what it targets. The policy conditions later choices on earlier ones so those decisions fit together.</p>
+              <p>I also separated resource-spending actions from movement and combat commands. Otherwise, the more frequent commands can dominate training and leave production decisions underrepresented.</p>
+              <p>Another issue was mismatched ability IDs between recorded demonstrations and the abilities available at runtime. Normalizing both to a generic ability identity stopped valid training labels from being discarded.</p>
+            </section>
+            <section id="evaluation">
+              <h2>Evaluating actor selection</h2>
+              <p>In an Augur experiment recorded on September 8, 2026, a rule redirected some actor selections toward units capable of production when resources were available.</p>
+              <p>It improved the production-command check but reduced broader ability accuracy beyond the experiment’s allowed margin, so I rejected it. The rule activated too often: being able to afford production didn’t mean production was the right move.</p>
+              <p>This was an offline check on a reused development holdout, with no full games played. It measured command predictions, not playing strength.</p>
+            </section>
+            <section id="limits">
+              <h2>Current work</h2>
+              <p>The work includes bot runtimes, learned policies, replay preparation, and evaluation tools. SpecTactics uses fixed opponents and an identified suite in the AI Arena environment to compare behavior.</p>
+              <p>I’m still investigating how well the offline measurements predict complete-game outcomes. Correct commands and better local scores are useful checks, but I need game results to establish whether a change makes the bot stronger.</p>
+              <p class="reading-note">Project notes · September 2026</p>
+            </section>
+          </div>
+        </div>
+      </article>
+      <div class="article-end"><a href="../investing-stats/"><span>Another project</span><span class="next-title">Investing Stats →</span></a><a href="mailto:jackbpipe@gmail.com">Email me about this project <span aria-hidden="true">↗</span></a></div>
+    </main>
+    <footer class="footer"><a href="../../">Jackson Pipe</a><span>Hamilton, Ontario</span></footer>
+  </div>
+</body>
+</html>
