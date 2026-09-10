@@ -57,6 +57,25 @@ Run `python build_site.py --check` to confirm the committed output matches `proj
 
 Local browser-review artifacts belong in the ignored `.preview/` directory.
 
+## Resume
+
+The previous resume PDF and generator are preserved locally in `_archive/resume/2026-09-09-before-redesign/`, which is ignored by Git. They also remain recoverable from commit `17d7079af8e2c707b2a40c7729bfdee1740f46f7`. The portfolio's existing links use the current `Resume_Jackson-Pipe.pdf` at the repository root.
+
+`build_resume.py` contains the resume content and generates `Resume_Jackson-Pipe.pdf`. Edit the summary, skills, training and experience entries in the script, then rebuild:
+
+```sh
+python -m pip install reportlab==5.0.1
+python build_resume.py
+```
+
+The resume follows the portfolio's Manrope typography and rust-and-charcoal palette. It uses short paragraphs and a narrow section-label rail. Relevant experience leads with the Niagara academic client work; qualifications share the same visual treatment. Contact details and web links sit in two aligned rows, with the portfolio link accented and underlined. Personal project case studies stay on the portfolio. The one-page PDF has embedded fonts and clickable contact, portfolio, and credential links. The generator checks the page count before replacing the existing PDF. Review the rendered page and extracted text after changing the content. Resume edits do not require running the site generator.
+
+`assets/fonts/manrope-regular.ttf` and `manrope-semibold.ttf` are static 400/600 instances of the existing `manrope.woff2`, generated with FontTools for PDF embedding. They retain the accompanying `Manrope-OFL.txt` licence. Rebuilding the resume only needs ReportLab; FontTools is needed only if regenerating those font instances.
+
+The cybersecurity training description combines Jackson's confirmed tabletop exercise and attack-response simulations with [Mohawk's 2025 program of studies](https://myssb.mohawkcollege.ca/mcprod/psecrsdes.P_POSGet?pos_prg=557&prg_ver=25-A) and [official program overview](https://www.mohawkcollege.ca/programs/graduate-studies/cyber-security-analytics-557), reviewed September 9, 2026. Program descriptions support training topics; they do not establish specific tools used, employment, or project outcomes. Personal dates follow the portfolio's background section and the corrected Niagara project dates.
+
+The Azure and Niagara diploma blurbs describe broad credential topics, checked against [Microsoft's Azure Fundamentals overview](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/) and [Niagara's Computer Programming overview](https://www.niagaracollege.ca/media/program/programming/). They do not imply professional Azure administration experience or completion of courses introduced after graduation.
+
 ## Contact
 
 [jackbpipe@gmail.com](mailto:jackbpipe@gmail.com) · [GitHub](https://github.com/Waxter88) · [LinkedIn](https://www.linkedin.com/in/jackson-pipe/)
